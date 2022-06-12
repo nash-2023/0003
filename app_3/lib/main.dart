@@ -4,7 +4,7 @@ import 'wrap.dart';
 import 'Sngchscview.dart';
 import 'sized_box.dart';
 import 'tcenter.dart';
-import 'TraisedButton.dart';
+import 'tTbuttons.dart';
 import '';
 import '';
 import '';
@@ -40,7 +40,19 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text(title),
       ),
-      body: TraisedButton(),
+      body: TButtons(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          print("FAB");
+        },
+        backgroundColor: Colors.black12,
+        tooltip: "Floating Action Button",
+        child: Icon(
+          Icons.crop,
+          size: 30.0,
+          color: Colors.red,
+        ),
+      ),
     );
   }
 }

@@ -8,7 +8,7 @@ class Tgesture extends StatelessWidget {
     return Center(
       child: GestureDetector(
         onTap: () {
-          print("GestDect");
+          print("GestDect !");
         },
         child: Container(
           padding: EdgeInsets.all(10.0),

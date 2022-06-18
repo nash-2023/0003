@@ -6,7 +6,7 @@ import 'sized_box.dart';
 import 'tcenter.dart';
 import 'tTbuttons.dart';
 import 'tgesture.dart';
-import '';
+import 'stful.dart';
 import '';
 import '';
 import '';
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Traininig',
+      title: 'Azkar',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -40,7 +40,7 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text(title),
       ),
-      body: Tgesture(),
+      body: Tstfull(),
       // floatingActionButton: FloatingActionButton(
       //   onPressed: () {
       //     print("FAB");

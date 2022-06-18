@@ -8,8 +8,24 @@ class Tgesture extends StatelessWidget {
     return Center(
       child: GestureDetector(
         onTap: () {
-          print("GestDect !");
+          print("GestDect tap !");
         },
+        // onDoubleTap: () {
+        //   print("GestDect double tap !");
+        // },
+        // onLongPress: () {
+        //   print("GestDect longpress !");
+        // },
+        // onTapUp: (t) {
+        //   print("tap up");
+        // },
+        // onTapDown: (t) {
+        //   print("Tap Down");
+        // },
+        // onTapCancel: () {
+        //   print("Tap cancel");
+        // },
+
         child: Container(
           padding: EdgeInsets.all(10.0),
           decoration: BoxDecoration(

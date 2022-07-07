@@ -82,14 +82,14 @@ class _TdrbdnbtnState extends State<Tdrbdnbtn> {
           height: 70.0,
           // padding: EdgeInsets.all(0.0),
           margin: EdgeInsets.only(left: 100.0, top: 100.0),
-          decoration: BoxDecoration(
-            // color: Color.fromARGB(255, 143, 92, 238),
-            border: Border.all(
-              color: Colors.black38,
-              width: 2.0,
-            ),
-            borderRadius: BorderRadius.circular(5.0),
-          ),
+          // decoration: BoxDecoration(
+          //   // color: Color.fromARGB(255, 143, 92, 238),
+          //   border: Border.all(
+          //     color: Colors.black38,
+          //     width: 2.0,
+          //   ),
+          //   borderRadius: BorderRadius.circular(5.0),
+          // ),
           child: ListTile(
             leading: Icon(
               Icons.ac_unit,

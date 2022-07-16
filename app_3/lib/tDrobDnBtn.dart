@@ -27,7 +27,7 @@ class _TdrbdnbtnState extends State<Tdrbdnbtn> {
     return Column(
       children: [
         Container(
-          // alignment: Alignment.topCenter,
+          // alignment: Alignment.center,
           width: 300.0,
           height: 70.0,
           // padding: EdgeInsets.only(left: 10.0),
@@ -41,42 +41,46 @@ class _TdrbdnbtnState extends State<Tdrbdnbtn> {
             ),
             borderRadius: BorderRadius.circular(10.0),
           ),
-          child: DropdownButton(
-            items: _drbDnMnuItms,
-            value: _selectedCountry,
-            hint: Text(
-              "    Select Your country",
+          child: DropdownButtonHideUnderline(
+            child: DropdownButton(
+              items: _drbDnMnuItms,
+              value: _selectedCountry,
+              hint: Text(
+                "    Select Your country",
+              ),
+              onChanged: _chngCntry,
+              // underline: Divider(
+              //   color: null,
+              //   thickness: 0.0,
+              //   height: 0.0,
+              // ),
+              // elevation: 10,
+              style: TextStyle(
+                // color: Colors.red,
+                fontSize: 16.0,
+                fontWeight: FontWeight.w900,
+                // decoration: TextDecoration.overline,
+                // decorationStyle: TextDecorationStyle.wavy,
+              ),
+              icon: Icon(
+                Icons.add_circle,
+                // color: Colors.green,   // if this hava a value, it will conquer
+                // size: 30.0,            // if this hava a value, it will conquer
+              ),
+              // isDense: true,
+              // alignment: Alignment.center,
+              // borderRadius: BorderRadius.circular(5.0),
+              menuMaxHeight: 210.0,
+              itemHeight: 70.0,
+              // focusColor: Color.fromARGB(255, 164, 243, 127),
+              // dropdownColor: Color.fromARGB(255, 109, 243, 165),
+              iconSize: 20.0,
+              iconEnabledColor: Colors.green,
+              isExpanded: true,
+              onTap: () {
+                print("Tap");
+              },
             ),
-            onChanged: _chngCntry,
-            underline: Divider(
-              color: null,
-              thickness: 0.0,
-              height: 0.0,
-            ),
-            // elevation: 10,
-            style: TextStyle(
-              // color: Colors.red,
-              fontSize: 16.0,
-              fontWeight: FontWeight.w900,
-              // decoration: TextDecoration.overline,
-              // decorationStyle: TextDecorationStyle.wavy,
-            ),
-            // // icon: Icon(
-            //   Icons.add_circle,
-            //   // color: Colors.green,   // if this hava a value, it will conquer
-            //   // size: 30.0,            // if this hava a value, it will conquer
-            // ),
-            // // isExpanded: true,
-            // isDense: true,
-            // alignment: Alignment.center,
-            // borderRadius: BorderRadius.circular(5.0),
-            menuMaxHeight: 210.0,
-            itemHeight: 70.0,
-            // focusColor: Color.fromARGB(255, 164, 243, 127),
-            // dropdownColor: Color.fromARGB(255, 109, 243, 165),
-            iconSize: 20.0,
-            iconEnabledColor: Colors.green,
-            isExpanded: true,
           ),
 
           //*********

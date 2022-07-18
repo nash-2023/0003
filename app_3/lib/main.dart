@@ -15,6 +15,8 @@ import 'package:app_3/tRadio.dart';
 import 'package:app_3/tRadioList.dart';
 import 'package:app_3/tSwitch.dart';
 import 'package:app_3/tlistTile.dart';
+import 'package:app_3/tcircleAvatar.dart';
+import 'package:app_3/tsnackBar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,13 +33,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Madad Ya rab'),
+      home: MyHomePage(title: 'Madad Ya rab'),
     );
   }
 }
 
 class MyHomePage extends StatelessWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  MyHomePage({Key? key, required this.title}) : super(key: key);
   final String title;
   @override
   Widget build(BuildContext context) {
@@ -45,7 +47,8 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text(title),
       ),
-      body: tlistTile(),
+      body: tsnackBar(),
+
       // floatingActionButton: FloatingActionButton(
       //   onPressed: () {
       //     print("FAB");

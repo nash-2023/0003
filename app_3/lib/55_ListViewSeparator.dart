@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class tListViewBuilder extends StatefulWidget {
-  const tListViewBuilder({Key? key}) : super(key: key);
+class tListViewSeparator extends StatefulWidget {
+  const tListViewSeparator({Key? key}) : super(key: key);
 
   @override
-  State<tListViewBuilder> createState() => _tListViewBuilderState();
+  State<tListViewSeparator> createState() => _tListViewSeparatorState();
 }
 
-class _tListViewBuilderState extends State<tListViewBuilder> {
+class _tListViewSeparatorState extends State<tListViewSeparator> {
   List x = [
     {
       "name": "a",
@@ -16,7 +16,7 @@ class _tListViewBuilderState extends State<tListViewBuilder> {
       "icon": "Icons.flag",
     },
     {
-      "name": "b",
+      "name": "ssssssssssssssssssssssss",
       "screen": "bb",
       "cpu": "bbb",
       "icon": "Icons.flag",
@@ -39,7 +39,7 @@ class _tListViewBuilderState extends State<tListViewBuilder> {
   Widget build(BuildContext context) {
     return Container(
       /** */
-      child: ListView.builder(
+      child: ListView.separated(
         itemCount: x.length,
         itemBuilder: (context, i) {
           return ListTile(
@@ -48,6 +48,14 @@ class _tListViewBuilderState extends State<tListViewBuilder> {
             trailing: Icon(
               Icons.ac_unit,
             ),
+          );
+        },
+        separatorBuilder: (context, i) {
+          return Divider(
+            color: Colors.orange,
+            thickness: 5.0,
+            indent: 10.0,
+            endIndent: 10.0,
           );
         },
       ),

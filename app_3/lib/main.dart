@@ -19,6 +19,11 @@ import 'package:app_3/tcircleAvatar.dart';
 import 'package:app_3/tsnackBar.dart';
 import 'package:app_3/53_ListView.dart';
 import 'package:app_3/54_ListViewBuilder.dart';
+import 'package:app_3/55_ListViewSeparator.dart';
+import 'package:app_3/56_GridView.dart';
+import 'package:app_3/57_GridViewNormal.dart';
+import 'package:app_3/58_ListGenerate.dart';
+import 'package:app_3/59_GridViewCount.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,6 +36,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Azkar',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -48,8 +54,20 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
+        leading: IconButton(icon: Icon(Icons.alarm), onPressed: () {}),
+        leadingWidth: 50.0,
+        actions: [
+          IconButton(icon: Icon(Icons.ac_unit_rounded), onPressed: () {}),
+          IconButton(icon: Icon(Icons.exit_to_app), onPressed: () {}),
+          IconButton(icon: Icon(Icons.notification_add), onPressed: () {}),
+        ],
+        elevation: 0.1,
+        shadowColor: Color.fromARGB(255, 54, 184, 244),
+        backgroundColor: Color.fromARGB(31, 255, 255, 255),
+        brightness: Brightness.light,
+        centerTitle: true,
       ),
-      body: tListViewBuilder(),
+      body: tGridViewCount(),
 
       // floatingActionButton: FloatingActionButton(
       //   onPressed: () {

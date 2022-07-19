@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class tListViewBuilder extends StatefulWidget {
-  const tListViewBuilder({Key? key}) : super(key: key);
+class tGridView extends StatefulWidget {
+  const tGridView({Key? key}) : super(key: key);
 
   @override
-  State<tListViewBuilder> createState() => _tListViewBuilderState();
+  State<tGridView> createState() => _tGridViewState();
 }
 
-class _tListViewBuilderState extends State<tListViewBuilder> {
+class _tGridViewState extends State<tGridView> {
   List x = [
     {
       "name": "a",
@@ -16,7 +16,7 @@ class _tListViewBuilderState extends State<tListViewBuilder> {
       "icon": "Icons.flag",
     },
     {
-      "name": "b",
+      "name": "ss",
       "screen": "bb",
       "cpu": "bbb",
       "icon": "Icons.flag",
@@ -39,14 +39,24 @@ class _tListViewBuilderState extends State<tListViewBuilder> {
   Widget build(BuildContext context) {
     return Container(
       /** */
-      child: ListView.builder(
+      child: GridView.builder(
+        scrollDirection: Axis.vertical,
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 3,
+          mainAxisSpacing: 2.0,
+          crossAxisSpacing: 10.0,
+          childAspectRatio: 1.7,
+        ),
         itemCount: x.length,
         itemBuilder: (context, i) {
           return ListTile(
             title: Text(x[i]["name"]),
             subtitle: Text(x[i]["screen"]),
-            trailing: Icon(
-              Icons.ac_unit,
+            trailing: Icon(Icons.ac_unit),
+            tileColor: Colors.red,
+            shape: Border.all(
+              color: Colors.black,
+              width: 1.0,
             ),
           );
         },
@@ -55,8 +65,6 @@ class _tListViewBuilderState extends State<tListViewBuilder> {
     );
   }
 }
-
-
 
 /*
 

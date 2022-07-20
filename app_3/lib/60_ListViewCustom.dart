@@ -11,7 +11,7 @@ class _tListViewCustomState extends State<tListViewCustom> {
   Widget cntnr(String ctxt) {
     return Container(
       // width: 100.0,
-      height: 500.0,
+      height: 100.0,
       margin: EdgeInsets.only(
         top: 10.0,
         right: 10.0,

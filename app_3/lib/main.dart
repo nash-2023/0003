@@ -56,19 +56,18 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      /***********************  ep 60 waz = appBar */
+      /************************************  ep 60 waz = appBar */
       appBar: AppBar(
         title: Text(title),
         centerTitle: true,
-        titleSpacing: 55.0,
+        // titleSpacing: 55.0,
         titleTextStyle: TextStyle(
           color: Color.fromARGB(232, 255, 255, 255),
-          fontSize: 30.0,
+          fontSize: 25.0,
           fontWeight: FontWeight.w600,
           fontFamily: "Arial",
         ),
-
-        leading: IconButton(icon: Icon(Icons.alarm), onPressed: () {}),
+        // leading: IconButton(icon: Icon(Icons.alarm), onPressed: () {}),
         leadingWidth: 50.0,
         actions: [
           IconButton(icon: Icon(Icons.ac_unit_rounded), onPressed: () {}),
@@ -81,7 +80,56 @@ class MyHomePage extends StatelessWidget {
         /* brightness: Brightness.light,  [depricated] */
         // systemOverlayStyle: SystemUiOverlayStyle.dark,
       ),
-      /***********************************************/
+      /******************************************* Drawer ep 61 waz/ */
+      drawerScrimColor: Colors.blue.withOpacity(0.5),
+      drawer: Drawer(
+        child: Column(
+          children: [
+            UserAccountsDrawerHeader(
+              accountName: Text(
+                "Abdalla Attia",
+                style: TextStyle(
+                  fontSize: 20.0,
+                ),
+              ),
+              accountEmail: Text(
+                "abdalla.fat7y@hotmail.com",
+                style: TextStyle(
+                  fontSize: 15.0,
+                  decoration: TextDecoration.lineThrough,
+                ),
+              ),
+              currentAccountPicture: CircleAvatar(
+                backgroundImage: NetworkImage(
+                  "https://placekitten.com/220/210",
+                ),
+              ),
+            ),
+            ListTile(
+              title: Text("home"),
+              subtitle: Text("bbbbbbbbbbbbbb"),
+              leading: Icon(Icons.house_rounded),
+            ),
+            ListTile(
+              title: Text("address"),
+              subtitle: Text("bbbbbbbbbbbbbb"),
+              leading: Icon(Icons.my_location),
+            ),
+            ListTile(
+              title: Text("aaaaaaaaaaaaaaaa"),
+              subtitle: Text("bbbbbbbbbbbbbb"),
+              leading: Icon(Icons.abc),
+            ),
+            ListTile(
+              title: Text("aaaaaaaaaaaaaaaa"),
+              subtitle: Text("bbbbbbbbbbbbbb"),
+              leading: Icon(Icons.house_rounded),
+            ),
+          ],
+        ),
+      ),
+      // endDrawer: Drawer(),
+      /************************************************************* */
       body: tListViewCustom(),
 
       // floatingActionButton: FloatingActionButton(

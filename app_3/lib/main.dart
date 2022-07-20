@@ -24,6 +24,8 @@ import 'package:app_3/56_GridView.dart';
 import 'package:app_3/57_GridViewNormal.dart';
 import 'package:app_3/58_ListGenerate.dart';
 import 'package:app_3/59_GridViewCount.dart';
+import 'package:flutter/services.dart';
+import 'package:app_3/60_ListViewCustom.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,12 +38,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      /******************* to remove "DEBUG" Banner */
       debugShowCheckedModeBanner: false,
+      /****************************** */
       title: 'Azkar',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Madad Ya rab'),
+      home: MyHomePage(title: 'O Almighty'),
     );
   }
 }
@@ -52,8 +56,18 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      /***********************  ep 60 waz = appBar */
       appBar: AppBar(
         title: Text(title),
+        centerTitle: true,
+        titleSpacing: 55.0,
+        titleTextStyle: TextStyle(
+          color: Color.fromARGB(232, 255, 255, 255),
+          fontSize: 30.0,
+          fontWeight: FontWeight.w600,
+          fontFamily: "Arial",
+        ),
+
         leading: IconButton(icon: Icon(Icons.alarm), onPressed: () {}),
         leadingWidth: 50.0,
         actions: [
@@ -61,13 +75,14 @@ class MyHomePage extends StatelessWidget {
           IconButton(icon: Icon(Icons.exit_to_app), onPressed: () {}),
           IconButton(icon: Icon(Icons.notification_add), onPressed: () {}),
         ],
-        elevation: 0.1,
-        shadowColor: Color.fromARGB(255, 54, 184, 244),
-        backgroundColor: Color.fromARGB(31, 255, 255, 255),
-        brightness: Brightness.light,
-        centerTitle: true,
+        elevation: 10.0,
+        shadowColor: Color.fromARGB(255, 0, 0, 0),
+        // backgroundColor: Color.fromARGB(31, 255, 255, 255),
+        /* brightness: Brightness.light,  [depricated] */
+        // systemOverlayStyle: SystemUiOverlayStyle.dark,
       ),
-      body: tGridViewCount(),
+      /***********************************************/
+      body: tListViewCustom(),
 
       // floatingActionButton: FloatingActionButton(
       //   onPressed: () {

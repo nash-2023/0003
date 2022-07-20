@@ -10,8 +10,8 @@ class tGridViewCount extends StatefulWidget {
 class _tGridViewCountState extends State<tGridViewCount> {
   List x = [
     {
-      "name": "a",
-      "screen": "aa",
+      "name": "Madad Ya Rab",
+      "screen": "Madad Ya Rab",
       "cpu": "aaa",
       "icon": "Icons.flag",
     },
@@ -38,14 +38,16 @@ class _tGridViewCountState extends State<tGridViewCount> {
   Widget build(BuildContext context) {
     return Container(
       /** */
+      padding: EdgeInsets.only(top: 10.0),
       child: GridView.count(
         crossAxisCount: 3,
         mainAxisSpacing: 10.0,
         crossAxisSpacing: 10.0,
+        childAspectRatio: 0.5,
         children: List.generate(11, (i) {
           return ListTile(
-            title: Text(x[2]["name"]),
-            subtitle: Text(x[2]["screen"]),
+            title: Text(x[0]["name"]),
+            subtitle: Text(x[0]["screen"]),
             trailing: Icon(Icons.ac_unit),
             tileColor: Colors.red,
             shape: Border.all(

@@ -53,9 +53,12 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatelessWidget {
   MyHomePage({Key? key, required this.title}) : super(key: key);
   final String title;
+
+  GlobalKey<ScaffoldState> scfldKey = new GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: scfldKey,
       /************************************  ep 60 waz = appBar */
       appBar: AppBar(
         title: Text(title),
@@ -81,8 +84,16 @@ class MyHomePage extends StatelessWidget {
         // systemOverlayStyle: SystemUiOverlayStyle.dark,
       ),
       /******************************************* Drawer ep 61 waz/ */
-      drawerScrimColor: Colors.blue.withOpacity(0.5),
+      drawerScrimColor: Colors.red.withOpacity(0.50),
       drawer: Drawer(
+        // backgroundColor: Colors.red.withOpacity(0.7),
+        // elevation: 5.0,
+        // shape: Border.all(
+        //   color: Colors.black,
+        //   width: 1.0,
+        // ),
+        // width: 250.0,
+        // semanticLabel: "drawer",
         child: Column(
           children: [
             UserAccountsDrawerHeader(
@@ -130,7 +141,20 @@ class MyHomePage extends StatelessWidget {
       ),
       // endDrawer: Drawer(),
       /************************************************************* */
-      body: tListViewCustom(),
+      body: Center(
+        child: MaterialButton(
+          color: Colors.red,
+          onPressed: () {
+            // scfldKey.currentState.openDrawer();  /* now working ! Why!? */
+          },
+          child: Text(
+            "open drawer",
+            style: TextStyle(
+              color: Colors.white,
+            ),
+          ),
+        ),
+      ),
 
       // floatingActionButton: FloatingActionButton(
       //   onPressed: () {

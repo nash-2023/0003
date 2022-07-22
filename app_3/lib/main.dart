@@ -54,11 +54,11 @@ class MyHomePage extends StatelessWidget {
   MyHomePage({Key? key, required this.title}) : super(key: key);
   final String title;
 
-  GlobalKey<ScaffoldState> scfldKey = new GlobalKey<ScaffoldState>();
+  GlobalKey<ScaffoldState> _scfldKey = new GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: scfldKey,
+      key: _scfldKey,
       /************************************  ep 60 waz = appBar */
       appBar: AppBar(
         title: Text(title),
@@ -145,7 +145,7 @@ class MyHomePage extends StatelessWidget {
         child: MaterialButton(
           color: Colors.red,
           onPressed: () {
-            // scfldKey.currentState.openDrawer();  /* now working ! Why!? */
+            _scfldKey.currentState?.openDrawer(); /* now working ! Why!? */
           },
           child: Text(
             "open drawer",

@@ -34,7 +34,12 @@ class _tListViewBuilderState extends State<tListViewBuilder> {
       "icon": "Icons.flag",
     },
   ];
-
+  List<IconData> _icons = [
+    Icons.abc,
+    Icons.mail,
+    Icons.flag,
+    Icons.ac_unit,
+  ];
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -46,7 +51,7 @@ class _tListViewBuilderState extends State<tListViewBuilder> {
             title: Text(x[i]["name"]),
             subtitle: Text(x[i]["screen"]),
             trailing: Icon(
-              Icons.ac_unit,
+              _icons[i],
             ),
           );
         },

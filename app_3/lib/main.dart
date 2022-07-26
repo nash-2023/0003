@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
       /****************************** */
       title: 'Azkar',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.cyan,
       ),
       home: MyHomePage(title: 'O Almighty'),
     );
@@ -59,16 +59,22 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scfldKey,
-      /************************************  ep 60 waz = appBar */
+      /**********************************************  ep 60 waz = appBar */
       appBar: AppBar(
         title: Text(title),
         centerTitle: true,
-        // titleSpacing: 55.0,
+        // titleSpacing: 80.0,
         titleTextStyle: TextStyle(
-          color: Color.fromARGB(232, 255, 255, 255),
+          color: Color.fromARGB(232, 0, 0, 0),
           fontSize: 25.0,
           fontWeight: FontWeight.w600,
           fontFamily: "Arial",
+          shadows: [
+            Shadow(
+              color: Color.fromARGB(255, 255, 156, 156),
+              blurRadius: 1.50,
+            ),
+          ],
         ),
         // leading: IconButton(icon: Icon(Icons.alarm), onPressed: () {}),
         leadingWidth: 50.0,
@@ -78,13 +84,13 @@ class MyHomePage extends StatelessWidget {
           IconButton(icon: Icon(Icons.notification_add), onPressed: () {}),
         ],
         elevation: 10.0,
-        shadowColor: Color.fromARGB(255, 0, 0, 0),
+        shadowColor: Color.fromARGB(255, 236, 132, 132),
         // backgroundColor: Color.fromARGB(31, 255, 255, 255),
         /* brightness: Brightness.light,  [depricated] */
         // systemOverlayStyle: SystemUiOverlayStyle.dark,
       ),
       /******************************************* Drawer ep 61 waz/ */
-      drawerScrimColor: Colors.red.withOpacity(0.50),
+      // drawerScrimColor: Colors.red.withOpacity(0.50),
       drawer: Drawer(
         // backgroundColor: Colors.red.withOpacity(0.7),
         // elevation: 5.0,
@@ -162,6 +168,7 @@ class MyHomePage extends StatelessWidget {
       // floatingActionButton: FloatingActionButton(
       //   onPressed: () {
       //     print("FAB");
+      //     _scfldKey.currentState?.openDrawer();
       //   },
       //   backgroundColor: Colors.black12,
       //   tooltip: "Floating Action Button",

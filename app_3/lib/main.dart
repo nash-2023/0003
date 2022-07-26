@@ -140,25 +140,24 @@ class MyHomePage extends StatelessWidget {
         ),
       ),
       // endDrawer: Drawer(),
-      /************************************************************* */
-      // body: Center(
-      //   child: MaterialButton(
-      //     color: Colors.red,
-      //     onPressed: () {
-      //       _scfldKey.currentState?.openDrawer(); /* now working ! Why!? */
-      //     },
-      //     child: Text(
-      //       "open drawer",
-      //       style: TextStyle(
-      //         color: Colors.white,
-      //       ),
-      //     ),
-      //   ),
-      // ),
-      //********************************** */
-      body: tListViewBuilder(),
-
-      //******************************** */
+      /************************************************************* Body */
+      body: Center(
+        child: MaterialButton(
+          color: Colors.red,
+          onPressed: () {
+            _scfldKey.currentState?.openDrawer();
+          },
+          child: Text(
+            "open drawer",
+            style: TextStyle(
+              color: Colors.white,
+            ),
+          ),
+        ),
+      ),
+      //************************************************************** */
+      // body: tListViewBuilder(),
+      //************************************************************** */
 
       // floatingActionButton: FloatingActionButton(
       //   onPressed: () {
@@ -175,28 +174,3 @@ class MyHomePage extends StatelessWidget {
     );
   }
 }
-
-
-
-// body layout
-
-// Center(
-//         // body container
-//         child: Container(
-//           margin: EdgeInsets.all(5.0),
-//           padding: EdgeInsets.all(10.0),
-//           // width: double.infinity,
-//           // height: double.infinity,
-//           decoration: BoxDecoration(
-//               color: Color.fromARGB(31, 250, 152, 152),
-//               border: Border.all(
-//                 color: Colors.red,
-//                 width: 2.0,
-//               ),
-//               borderRadius: BorderRadius.circular(10.0)),
-//           // *****************************
-//           child: Sized_box(),
-//           // ******************************
-//         ),
-//       ),
-      
